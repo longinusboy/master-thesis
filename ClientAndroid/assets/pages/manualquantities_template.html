@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="Description" content="Introdu&ccedile;&atilde;o Manual">
+<title>Introdu&ccedil;&atilde;o Manual</title>
+<script type="text/javascript">
+	function addProduct(subtype, weight, minWeight, maxWeight, unit, realWeight, displayedUnit) {
+		Android.addProduct(subtype, parseInt(weight), parseInt(minWeight), parseInt(maxWeight), unit, parseInt(realWeight), displayedUnit);
+	}
+	function onBackClick() {
+		window.history.back();
+	}
+</script>
+<style>
+.typeButton {
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: 2px solid #F77;
+            background: #FFF;
+            width: 100%;
+            height: 2.2cm;
+            font-size: 1.3em;
+        }
+        .backButton {
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: 2px solid #F77;
+            background: #F77;
+            width: 100%;
+            height: 3em
+        }
+</style>
+</head>
+
+<body>
+  <div id="main" name="main" width="100%">
+    %DATACONTENT%
+  </div>
+</body>
+</html>

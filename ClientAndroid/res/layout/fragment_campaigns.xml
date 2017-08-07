@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.longinus.testsidebar.CollectionsActivity" >
+
+    <ListView
+        android:id="@+id/listView_campaigns"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:choiceMode="singleChoice"
+        android:divider="#dddddd"
+        android:dividerHeight="1dp"
+        tools:listheader="@layout/campaigns_header"
+        tools:listitem="@layout/campaign_row" >
+
+    </ListView>
+    
+    <TextView
+        android:id="@+id/empty_campaigns"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/text_empty_campaigns"
+        android:textSize="18sp" />
+
+</LinearLayout>

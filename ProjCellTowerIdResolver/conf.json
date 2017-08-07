@@ -1,0 +1,12 @@
+{
+	"address" : "cellid-resolver",
+    "collectionOpenCellID" : "opencellid",
+    "collectionSlashGPS" : "slashgps",
+    "collectionGoogleMmapCache" : "mmapcache",
+    
+    "mongo_address": "mongodb-persistor-celltower",
+    "mongo_host": "localhost",
+    "mongo_port": 27017,
+    "mongo_pool_size": 10,
+    "mongo_db_name": "celltowersids"
+}

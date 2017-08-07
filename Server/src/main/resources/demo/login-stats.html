@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<title>Autentica&ccedil;&atilde;o</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<style>
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.col-md-3, .col-md-4 {
+	text-align: center;
+}
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Acesso p&uacute;blico</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" method="post" action="login.html">
+            <div class="form-group">
+              <input type="text" id="inputUsername" name="username" placeholder="Username" class="form-control" value="demo" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="inputPassword" name="password" placeholder="Password" class="form-control" value="demo" required>
+            </div>
+            <button type="submit" class="btn btn-success">Entrar</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Leite e derivados</h2>
+				<input class="knob" data-width="150" value="%A_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>Mercearia</h2>
+				<input class="knob" data-width="150" value="%B_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>Cereais</h2>
+				<input class="knob" data-width="150" value="%C_VAL%" readonly >
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Hortali&ccedil;as e Frutas</h2>
+				<input class="knob" data-width="150" value="%D_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>Enlatados</h2>
+				<input class="knob" data-width="150" value="%E_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>L&iacute;quidos</h2>
+				<input class="knob" data-width="150" value="%F_VAL%" readonly >
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Produtos de Higiene</h2>
+				<input class="knob" data-width="150" value="%G_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>Produtos de Limpeza</h2>
+				<input class="knob" data-width="150" value="%H_VAL%" readonly >
+			</div>
+			<div class="col-md-4">
+				<h2>Charcutaria</h2>
+				<input class="knob" data-width="150" value="%I_VAL%" readonly >
+			</div>
+		</div>
+    </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]><script type="text/javascript" src="https://raw.githubusercontent.com/aterrien/jQuery-Knob/master/excanvas.js"></script><![endif]-->
+	<script src="https://raw.githubusercontent.com/aterrien/jQuery-Knob/master/dist/jquery.knob.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+	<script>
+            $(function($) {
+
+                $(".knob").knob({
+                    format : function (value) {
+                        return value + '%';
+                    },
+                    draw : function () {
+
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
+
+                            this.cursorExt = 0.3;
+
+                            var a = this.arc(this.cv)  // Arc
+                                , pa                   // Previous arc
+                                , r = 1;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+  </body>
+</html>

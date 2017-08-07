@@ -1,0 +1,7 @@
+src/main/resources
+bin
+out/production/ProjServer2
+out/test/ProjServer2
+build/deps
+build/classes/production/ProjServer
+build/classes/test/ProjServer

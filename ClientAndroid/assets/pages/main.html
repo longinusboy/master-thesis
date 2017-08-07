@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Description" content="P&aacute;gina Inicial">
+    <title>P&aacute;gina Inicial</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	        $("#listProducts").css("max-height", getListHeight());
+	    });
+	    
+	    function getListHeight() {
+            return Android.getListHeight()+"cm";
+        }
+	    
+        function onRowClick(id) {
+            Android.onRowClick(id);
+        }
+
+        function onManualClick() {
+            Android.onManualClick();
+        }
+
+        function onScanClick() {
+            Android.onScanClick();
+        }
+
+        function finalize() {
+            Android.finalizeBag();
+        }
+        
+        function updateClickables() {
+        	$(".clickableRow").click(function () {
+                onRowClick($(this).attr("data-url"))
+            });
+        }
+
+        function setListProducts(str) {
+            $('#listProducts').html(str);
+            updateClickables();
+        }
+    </script>
+    <style>
+        * {
+            margin: 0
+        }
+        html,
+        body {
+            height: 100%;
+            text-align: center;
+        }
+        .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -2cm;
+            width: 100%;
+            min-width: 100%;
+        }
+        #listProducts {
+            //padding-top: 2.5cm;
+            font-size: 120%;
+            overflow-y: auto;
+            width: 100%;
+        }
+        .manualButton {
+            border-radius: 0px 0px 10px 0px;
+            -moz-border-radius: 0px 0px 10px 0px;
+            -webkit-border-radius: 0px 0px 10px 0px;
+            border: 2px solid #F77;
+            background: #FFF;
+            width: 2.5cm;
+            height: 2cm;
+            background-image: url(manual.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 64px 64px;
+        }
+        .scanButton {
+            border-radius: 0px 0px 0px 10px;
+            -moz-border-radius: 0px 0px 0px 10px;
+            -webkit-border-radius: 0px 0px 0px 10px;
+            border: 2px solid #F77;
+            background: #FFF;
+            width: 2.5cm;
+            height: 2cm;
+            background-image: url(barcode.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 64px 64px;
+        }
+        .finishButton {
+            border-radius: 0px 0px 10px 10px;
+            -moz-border-radius: 0px 0px 10px 10px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border: 2px solid #F77;
+            background: #FFF;
+            max-width: 4.0cm;
+            min-width: 2.5cm;
+            width: 100%;
+            height: 2cm;
+            font-size: 1.3em;
+            background-image: url(cart.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 48px 36px;
+            background-origin: padding-box;
+            padding-left: 48px;
+			margin-top: -1px;
+			overflow: hidden;
+        }
+        table {
+            //border-collapse: collapse;
+			border-spacing:0;
+			border: 0;
+        }
+        tr.clickableRow td {
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+        }        
+        .tablecenter {
+            position: absolute;
+            top: 50%;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+        }
+        .gray {
+            color: #777777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <table width=100% cellpadding="0" >
+            <tr>
+                <td style="text-align: left;"><input type="button" class="manualButton" onClick="onManualClick()" value="" /></td>
+                <td style="text-align: center; border-collapse: collapse; "><input type="button" class="finishButton" onClick="finalize()" value="Finalizar" /></td>
+                <td style="text-align:right"><input type="button" class="scanButton" onClick="onScanClick()" value="" /></td>
+            </tr>
+        </table>
+        <div id="listProducts">
+        </div>
+    </div>
+
+</body>
+
+</html>

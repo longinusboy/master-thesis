@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Description" content="P&aacute;gina Inicial">
+    <script src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	        //$("#listProducts").css("max-height", getListHeight());
+	    });
+	    
+	    function getListHeight() {
+            return Android.getListHeight()+"cm";
+        }
+	    
+        function onRowClick(id) {
+            Android.onRowClick(id);
+        }
+
+        function onManualClick() {
+            Android.onManualClick();
+        }
+
+        function onScanClick() {
+            Android.onScanClick();
+        }
+
+        function finalize() {
+            Android.finalizeBag();
+        }
+        
+        function updateClickables() {
+        	$(".clickableRow").click(function () {
+                onRowClick($(this).attr("data-url"))
+            });
+        }
+
+        function setListProducts(str) {
+            $('#listProducts').html(str);
+            updateClickables();
+        }
+    </script>
+    <style>
+        * {
+            margin: 0
+        }
+        html,
+        body {
+            height: 100%;
+            text-align: center;
+        }
+		
+        #listProducts {
+            //padding-top: 2.5cm;
+            font-size: 120%;
+            overflow-y: auto;
+            width: 100%;
+        }
+		
+        table {
+            //border-collapse: collapse;
+			border-spacing:0;
+			border: 0;
+			width: 100%;
+        }
+		
+        tr.clickableRow td {
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+		
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+        }        
+        .tablecenter {
+            position: absolute;
+            top: 50%;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+        }
+        .gray {
+            color: #777777;
+        }
+    </style>
+</head>
+
+<body>
+	<div id="listProducts">
+	</div>    
+</body>
+
+</html>

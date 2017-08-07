@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html>
+<head>
+    
+    <script src="RGraph.common.core.js" ></script>
+    <script src="RGraph.pie.js" ></script>
+    <script src="jquery-1.11.1.min.js"></script>
+    
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="User contribute" />
+     
+</head>
+<body>
+
+
+    <canvas id="cvs"></canvas>
+    
+    <script>
+        $(document).ready(function ()
+        {			
+			var pie = new RGraph.Pie({
+                id: 'cvs',
+                data: [%%MY_SCORE%%, %%OTHER_SCORE%%],
+                options: {
+                    strokestyle: 'gray',
+                    colors: ['#FF4444','#DDDDDD'],
+                    linewidth: 1,
+                    exploded: [, 5],
+                    shadow: {
+                        offsetx: 0,
+                        offsety: 0,
+                        blur: 20
+                    },
+                    labels: {
+                        self: ['Eu (%%MY_SCORE%%%)', 'Outros (%%OTHER_SCORE%%%)'],
+                        sticks: {
+                            self: [true, true],
+                            length: 5
+                        }
+                    }
+                    
+                }
+            }).roundRobin()
+        })
+    </script>
+
+</body>
+</html>

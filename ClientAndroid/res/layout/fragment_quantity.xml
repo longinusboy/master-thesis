@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.longinus.projcaritasand.CustomNumberPicker
+        xmlns:picker="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/numberPickerManual"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        max="1000"
+       	min="1" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:minHeight="70dp"
+        android:onClick="onFinalizeClick"
+        android:text="@string/btn_add" />
+
+</LinearLayout>

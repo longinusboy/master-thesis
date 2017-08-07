@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
+        <!-- <item name="android:dropDownListViewStyle">@style/DropDownListView.Caritas</item>  -->      
+        <!-- < item name="andr oid: background"> @ drawable/ab_solid_caritas</item> -->
+        <!-- <item name="android:progressBarStyle">@style/ProgressBar.Caritas</item> -->
+        <item name="android:actionBarStyle"   tools:ignore="NewApi">@style/MyActionBar</item>
+	    <item name="android:buttonStyle">@style/btnCaritasShape</item>
+	    <item name="android:imageButtonStyle">@style/btnCaritasShape</item>
+    </style>	
+
+	<style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+	    <item name="android:background"  tools:ignore="NewApi">@color/red</item>
+	    <item name="android:ellipsize">start</item>
+	</style>
+	
+	<style name="btnCaritasShape" parent="@android:style/Widget.Button">
+		<item name="android:background">@drawable/btn_caritas_shape</item>
+		<item name="android:minHeight">40dp</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:padding">6dp</item>
+	</style>
+    
+    <style name="NumberPickerUpButton" parent="@android:style/Widget.ImageButton">
+        <item name="android:background">@drawable/numberpicker_up_btn</item>
+        <item name="android:paddingTop">22dip</item>
+        <item name="android:paddingBottom">22dip</item>
+    </style>
+
+    <style name="NumberPickerDownButton" parent="@android:style/Widget.ImageButton">
+        <item name="android:background">@drawable/numberpicker_down_btn</item>
+        <item name="android:paddingTop">22dip</item>
+        <item name="android:paddingBottom">22dip</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="NumberPickerInputText" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAppearance">@style/NumberPickerInputText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/numberpicker_input</item>
+    </style>
+    
+    <style name="cust_numPicker" parent="@android:style/Theme.Light" />
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Recolha de Bens</string>
+    <string name="crash_toast_text">Infelizmente a aplicação crashou, está a ser criado um relatório do erro.</string>
+    <string name="action_chart">Ver estatisticas</string>
+    <string name="action_finish">Finalizar</string>
+    <string name="action_search">Procurar</string>
+    <string name="action_refresh">Atualizar</string>
+    <string name="title_server_access">Comunicação ao servidor</string>
+    <string name="title_registries">Registos</string>
+    <string name="text_sent">"Enviados: "</string>
+    <string name="text_awaiting">"Em espera: "</string>
+    <string name="txt_queue_list">Lista de espera</string>
+    <string name="txt_send_data">Forçar envio e\natualização de dados</string>
+    <string name="title_myid">O meu ID</string>
+    <string name="drawer_open">Abrir menu</string>
+    <string name="drawer_close">Fechar menu</string>
+    
+    <string-array name="sidemenu_array">
+        <item>Campanhas</item>
+        <item>Recolha</item>
+        <item>Catalog. Produtos</item>
+        <item>Lista</item>
+        <item>Informações</item>
+        <item>Estatísticas</item>
+        <item>Minhas Estatísticas</item>
+        <item>Sobre a Aplicação</item>
+        <item>Apoio</item>
+        <item>Sair</item>
+    </string-array>
+
+    <string name="title_email">Email</string>
+    <string name="title_telephone">Telefone</string>
+    <string name="title_activity_simple_list">Lista</string>
+    <string name="title_campaigns_header">Campanhas disponíveis</string>
+    <string name="btn_add">Adicionar</string>
+    <string name="btn_finish">Finalizar</string>
+    <string name="text_last_server_access">"Último acesso: "</string>
+    <string name="text_last_server_update">"Última atualização: "</string>
+    <string name="text_empty_campaigns">Nenhuma campanha na lista.\nExperimente novamente mais tarde.</string>
+	<string name="help_number">123456789</string>
+	<string name="help_email">admin@example.com</string>
+	<string name="title_registries_sent">Registos enviados</string>
+	<string name="text_products_registered">Produtos registados: </string>
+	<string name="text_weight_registered">"Peso estimado: "</string>
+	<string name="text_contribute_position">"Posição: "</string>
+	<string name="text_contribute_campaign">"Em toda a campanha: "</string>
+	<string name="title_my_contribute">O meu contributo</string>
+	<string name="title_blocked">Dispositivo bloqueado</string>
+	<string name="text_blocked">Por algum motivo este dispositivo encontra-se bloqueado, utilize os seguintes contactos para obter mais informações</string>
+	<string name="title_myid2">"O meu ID: "</string>
+
+</resources>

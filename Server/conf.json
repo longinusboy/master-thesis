@@ -1,0 +1,67 @@
+{
+	"listeningPort" : 8080,
+    "cellid-resolver" : {
+    	"address" : "cellid-resolver",
+        "collectionOpenCellID" : "opencellid",
+        "collectionSlashGPS" : "slashgps",
+        "collectionGoogleMmapCache" : "mmapcache",
+        
+        "mongo_address": "mongodb-persistor-celltower",
+        "mongo_host": "localhost",
+        "mongo_port": 27017,
+        "mongo_pool_size": 10,
+        "mongo_db_name": "celltowersids"
+    },
+    "caritas" : {
+    	"mongo-persistor" : {
+	        "address": "mongodb-persistor",
+	        "host": "localhost",
+	        "port": 27017,
+	        "pool_size": 10,
+	        "db_name": "caritas"
+	    },
+	    "work-queue-registries" : {
+	        "address": "caritas.registry.orderQueue",
+	        "process_timeout": 120000
+	    },
+	    "admin" : {
+	    	"username" : "admin",
+    		"password" : "pasS!2"
+	    }
+    },
+    "demo" : {
+    	"mongo-persistor" : {
+	        "address": "mongodb-persistor-demo",
+	        "host": "localhost",
+	        "port": 27017,
+	        "pool_size": 10,
+	        "db_name": "rb_demo"
+	    },
+	    "work-queue-registries" : {
+	        "address": "demo.registry.orderQueue",
+	        "process_timeout": 120000
+	    },
+	    "admin" : {
+	    	"username" : "demo",
+	    	"password" : "demo"
+	    }
+    },
+    "evida" : {
+    	"mongo-persistor" : {
+	        "address": "mongodb-persistor-evida",
+	        "host": "localhost",
+	        "port": 27017,
+	        "pool_size": 10,
+	        "db_name": "evida"
+	    },
+	    "work-queue-registries" : {
+	        "address": "evida.registry.orderQueue",
+	        "process_timeout": 120000
+	    },
+	    "admin" : {
+	    	"username" : "evida",
+	    	"password" : "evida"
+	    }
+    }
+    	
+}

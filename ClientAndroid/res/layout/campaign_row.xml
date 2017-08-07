@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtCampaignUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Ativa"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#00cc00" />
+
+    <ImageView
+        android:id="@+id/imgCampaignAuthorized"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/txtCampaignUsed"
+        android:src="@drawable/ic_action_authorized" />
+
+    <TextView
+        android:id="@+id/txtCampaignDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtCampaignTitle"
+        android:text="1 de Julho - 16 de Agosto"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#999999" />
+
+    <TextView
+        android:id="@+id/txtCampaignTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/imgCampaignAuthorized"
+        android:text="Nome da campanha"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+{
+
+  // Java verticle
+  "main":"org.projmis.RestServer",
+  
+  "includes":"org.projmis~mod-celltowerid-resolver~1.0-SNAPSHOT,io.vertx~mod-mongo-persistor~2.1.0,io.vertx~mod-work-queue~2.0.0-CR2",
+
+  "description":"Rest server to Caritas project",
+  "licenses": ["The Apache Software License Version 2.0"],
+  "author": "David Silva",
+
+  // Optional fields
+  "developers": ["David Silva"],
+  "keywords": ["rest", "server", "caritas", "database", "products"],
+
+  "auto-redeploy": true
+
+}

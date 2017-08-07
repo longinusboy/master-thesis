@@ -1,0 +1,18 @@
+{
+
+  "main":"org.projmis.celltoweridresolver.CellResolver",
+
+  "includes":"io.vertx~mod-mongo-persistor~2.1.0",
+  
+  "description":"CellTower ID Resolver to Caritas project",
+  "licenses": ["The Apache Software License Version 2.0"],
+  "author": "David Silva",
+
+  "developers": ["David Silva"],
+  "keywords": ["cell", "celltower", "mongodb", "database", "resolver"],
+  
+  "worker": true,
+
+  "auto-redeploy": true
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Description" content="Loading">
+    <title>Loading...</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        var canShowMessage = false;
+        $(document).ready(function () {
+			//centerIt($('#divcenterelem'));
+			//$('#logo').
+            $('#logo').css('visibility','visible').hide().fadeIn(2500, function () {
+                $('#spinner').css('visibility','visible').hide().fadeIn(function () {
+                    $('#message').css('visibility','visible').hide().fadeIn(function () {
+                        canShowMessage = true;
+                    });
+                });
+            });
+        });
+
+        function showMessage(str) {
+            if (canShowMessage) {
+                $('#message').fadeOut(function () {
+                    $('#message').text(str);
+                    $('#message').fadeIn();
+                });
+            }
+        }
+
+        function finishSequence(str) {
+            canShowMessage = false;
+            $('#message').fadeOut(function () {
+                $('#message').text(str);
+                $('#message').fadeIn(function () {
+                	$('#message').delay(500).fadeOut(1900);
+                    $('#spinner').delay(500).fadeOut(2000);
+                    $('#logo').delay(500).fadeOut(2000, function () {
+                    	Android.loadingFinished();
+                    });
+                });
+            });            
+        }
+    </script>
+	<style>
+		.tablecenter {
+			position: absolute;
+            top: 30%;
+            vertical-align: middle;
+            text-align: center;
+            width: 95%;
+		}
+	</style>
+</head>
+
+<body>
+	<table class="tablecenter">
+		<tr>
+			<td>
+				<div id="logo" align="center" style="visibility: hidden">
+					<img src="caritas_logo.png"></img>
+				</div>
+				<p></p>
+				<div id="spinner" align="center" style="visibility: hidden">
+					<img src="loader.gif"></img>
+				</div>
+				<p></p>
+				<div align="center"><span id="message" style="visibility: hidden"></span></div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>
